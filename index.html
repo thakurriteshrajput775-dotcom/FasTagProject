@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FASTag Recharge - XYZ</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="pageLoader">
+        <div class="loader-content">
+            <div class="spinner-border text-light" role="status"></div>
+            <p class="text-light mt-2">Please wait...</p>
+        </div>
+    </div>
+    
+    <nav class="custom-navbar">
+        <div class="container">
+            <div class="top-row row align-items-center justify-content-between">
+                <!-- Left Logo -->
+                <div class="logo col-auto">
+                    <a href="index.html" class="logo-text">
+                        XYZ
+                    </a>
+                </div>
+
+                <!-- Right Desktop -->
+                <div class="right d-none d-lg-flex align-items-center col-auto">
+                    <a href="javascript:void(0)" class="wallet me-3">
+                        <i class="fa-solid fa-wallet me-1"></i> Wallet
+                    </a>
+                    <div class="profile profile-avatar">
+                        <a href="javascript:void(0)">
+                            <img src="https://logiclead.in/assets/img/new-guest-user-male.svg" alt="Profile" />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Mobile -->
+                <div class="d-flex d-lg-none align-items-center col-auto">
+                    <a href="javascript:void(0)" class="wallet me-3">
+                        <i class="fa-solid fa-wallet" style="font-size: 22px;"></i>
+                    </a>
+                    <button class="menu-btn" id="menuToggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Side -->
+                <div class="col-lg-6 text-lg-start text-center mb-lg-0 mb-4">
+                    <h1 class="hero-title">
+                        FASTag Recharge <br />
+                        Online at <span>XYZ</span>
+                    </h1>
+                    <ul class="hero-list">
+                        <li>Multiple Payment Option</li>
+                        <li>Multiple Discounts & Offers for FASTag</li>
+                        <li>24×7 Customer Support</li>
+                    </ul>
+                </div>
+
+                <!-- Right Side - Recharge Card -->
+                <div class="col-lg-6">
+                    <div class="recharge-container">
+                        <div class="hero-card">
+                            <!-- Recharge Header -->
+                            <div class="recharge-header">
+                                <h2>FASTag Recharge</h2>
+                                <img src="https://logiclead.in/assets/img/icons/bbps-new-2.png" alt="Bharat Connect" />
+                            </div>
+                            <div class="recharge-body">
+                                <!-- Input -->
+                                <input type="text" class="form-control mb-3" placeholder="Enter vehicle number"
+                                    id="vehicleInput" />
+
+                                <!-- Button -->
+                                <button class="btn btn-secondary" id="proceedBtn">
+                                    Proceed
+                                </button>
+
+                                <!-- Note -->
+                                <small class="text-dark"><i class="bi bi-lightning-charge-fill"></i> Get the best deals on FASTag
+                                    Recharge</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Banner Section -->
+    <section class="full-width-banner">
+        <img src="https://logiclead.in/assets/img/Website Banner 4.png" alt="Banner" />
+    </section>
+    
+    <section class="provider-section">
+        <div class="container">
+            <h3>FASTag Provider</h3>
+            <div class="bank-provider-track" id="bankProviderTrack">
+                <div class="row g-3">
+                    <!-- Indian Highways Management -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/IHMCL-Logo.jpeg"
+                                    alt="Indian Highways Management" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Indian Highways...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IndusInd Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/7fb9c4ae317ff5a843b86d86042f6597.jpg"
+                                    alt="IndusInd Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    IndusInd Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bank of Baroda -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/eb55d100ee42369d2e984e3cb4758c76.jpg"
+                                    alt="Bank of Baroda" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Bank of Baroda
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Axis Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/76aabd7ec028d2927d5af281e82d9394.jpg"
+                                    alt="Axis Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Axis Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IDFC FIRST Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/2dad745c5f2fdd1f341fd31ef4937a50.jpg"
+                                    alt="IDFC FIRST Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    IDFC FIRST Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HDFC Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/3d0764bf519e0ae62a43f818f832ca11.jpg"
+                                    alt="HDFC Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    HDFC Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kotak Mahindra Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/3adb17ad584e31a26d7f1119beb26c86.jpg"
+                                    alt="Kotak Mahindra Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Kotak Mahindra...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Equitas -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/51c53153e4a1ab4b735c213e62d7733f.jpg"
+                                    alt="Equitas" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Equitas
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IDBI Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/6efb93f54538ebaf6c5251bc7a42713c.jpg"
+                                    alt="IDBI Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    IDBI Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IOB -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/97a2e9a37d151bf1729b96678a88e292.jpg"
+                                    alt="IOB" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    IOB
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jammu and Kashmir Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/55ba49c0871bbcfa6729799e4cdb466d.jpg"
+                                    alt="Jammu and Kashmir Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Jammu and Kashm...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Karnataka Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/15.webp"
+                                    alt="Karnataka Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Karnataka Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paytm Payments Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/8c6219ff367beac5f2730160a41aa897.jpg"
+                                    alt="Paytm Payments Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Paytm Payments...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- State Bank of India -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/0986338cc1bd9659da9133bb4fc783a6.jpg"
+                                    alt="State Bank of India" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    State Bank of I...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Federal Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/2a4242814a0f7cc956fc2d14c1c4af2c.jpg"
+                                    alt="Federal Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Federal Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ICICI Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/13102943-icici-b9b38f77-216e-45f2-891b-edf7a7643433.webp"
+                                    alt="ICICI Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    ICICI Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UCO Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/672b816d9405e17417c090fbb406ea6e.jpg"
+                                    alt="UCO Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    UCO Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Airtel Payments Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/1.webp"
+                                    alt="Airtel Payments Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Airtel Payments...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Axis Bank (Duplicate) -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/76aabd7ec028d2927d5af281e82d9394.jpg"
+                                    alt="Axis Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Axis Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bank of Maharashtra -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/1fd5be4d78777be064c80de62fda8136.jpg"
+                                    alt="Bank of Maharashtra" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Bank of Maharas...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Indian Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/66b5169c89ca2c55173cc4f3580418d1.jpg"
+                                    alt="Indian Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Indian Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LivQuik Technology India -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/livquik_logo.jpg"
+                                    alt="LivQuik Technology India" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    LivQuik Technol...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- South Indian Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/b037d11999aed70e83657233c18675f6.jpg"
+                                    alt="South Indian Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    South Indian Ba...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Union Bank of India -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/18.png"
+                                    alt="Union Bank of India" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Union Bank of I...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canara Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/c1ef2e91b95eac43bc00afbd580d23a3.jpg"
+                                    alt="Canara Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Canara Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AU Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/20.webp"
+                                    alt="AU Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    AU Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bandhan Bank -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="https://logiclead.in/assets/img/banking_logo/4ae8ee4f8f839bab7ceb8501e4555763.jpg"
+                                    alt="Bandhan Bank" class="img-fluid mb-2" />
+                                <p class="mb-0 small fw-medium">
+                                    Bandhan Bank
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Side Content -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2>About Us</h2>
+                    <p>
+                        Welcome to <b>XYZ</b>, your trusted platform
+                        for FASTag recharge. We make it easy for vehicle
+                        owners to recharge their FASTag quickly and securely from anywhere.
+                    </p>
+                    <p>
+                        Our goal is to save your time at toll plazas by providing a smooth recharge
+                        experience with multiple payment options. With reliable service, exciting offers,
+                        and dedicated support, we are here to make your travel easier and more convenient.
+                    </p>
+                </div>
+
+                <!-- Right Side Image -->
+                <div class="col-lg-6 text-center">
+                    <img src="https://logiclead.in/assets/img/banking_logo/mactc8ig_fastag_625x300_17_February_25.jpg"
+                        alt="About Us" class="img-fluid rounded shadow" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5"><strong>Frequently Asked Questions</strong></h2>
+            <div class="faq-container">
+                <!-- FAQ Item -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is FASTag? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            FASTag is a prepaid tag fixed on your vehicle's windscreen that enables automatic toll
+                            payment at toll plazas using RFID technology.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I recharge my FASTag on XYZ? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Simply enter your vehicle/FASTag details, choose a recharge amount, select your payment
+                            method (UPI, card, net banking), and complete the payment.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What payment methods are accepted? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Logiclead supports UPI, debit/credit cards, net banking, and popular digital wallets.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is there any minimum recharge amount? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Yes, the minimum recharge amount depends on the issuing bank, but on Logiclead, you can
+                            start from as low as ₹100.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long does it take for the recharge to reflect? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Recharges are usually credited instantly, but in rare cases, it may take up to 30 minutes
+                            depending on the bank network.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download -->
+    <section class="app-download">
+        <div class="container text-center">
+            <div class="phones">
+                <img src="https://logiclead.in/assets/img/banking_logo/rechargeicon_20240803130432465829.jpg"
+                    alt="Phone Left" class="img-fluid" />
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Logo & Social -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="logo-text footer-logo">
+                        XYZ
+                    </div>
+                </div>
+
+                <!-- Reach Us - Moved to right side -->
+                <div class="col-lg-4 col-md-6 offset-lg-4">
+                    <h5 class="fw-bold mb-3">Reach Us</h5>
+                    <p>
+                        <i class="bi bi-envelope-fill me-2"></i> xyz@gamil.in
+                    </p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> xyz@gamil.in</p>
+                    <p>
+                        <i class="bi bi-geo-alt-fill me-2"></i> Office No XYZ, XYZ Floor, D-XYZ, Sector X, XYZ,
+                        XYZ, 000000.
+                    </p>
+                </div>
+            </div>
+            <!-- Bottom bar -->
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center border-top py-4 mt-4">
+                <p class="mb-0">© 2025 XYZ. All rights reserved</p>
+                <div>
+                    <a href="/termsConditions" class="me-3">Terms & Conditions</a>
+                    <a href="/privacyPolicy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Slide Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="menu-logo">
+                <div class="logo-text">XYZ</div>
+            </div>
+            <button class="close-menu" id="menuClose">&times;</button>
+        </div>
+
+        <!-- Login / Signup Section -->
+        <div class="login-box profile-avatar">
+            <img src="https://logiclead.in/assets/img/new-guest-user-male.svg" alt="User Icon" />
+            <div class="login-text">
+                <h6>Login / Signup</h6>
+                <p>Login to avail best deals</p>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="login-box profile-avatar">
+            <div class="login-text">
+                <h6><i class="fa-solid fa-wallet me-1"></i> Wallet</h6>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </div>
+
+    <!-- Profile Popup -->
+    <div class="custom-profile-popup" id="customProfilePopup">
+        <div class="custom-popup-content">
+            <button class="custom-popup-close" id="customClosePopup">
+                &times;
+            </button>
+            <div class="custom-popup-header">
+                <h4 class="custom-user-name">Login</h4>
+            </div>
+            <div class="custom-popup-body">
+                <form class="custom-popup-form">
+                    <div class="form-group">
+                        <label for="popupEmail">Email</label>
+                        <input type="email" id="LoginEmail" name="email" placeholder="Enter your email"
+                            required />
+                    </div>
+                    <button type="button" class="custom-popup-btn" id="LoginFormBtn">
+                        Login
+                    </button>
+                    <div class="form-check d-flex align-items-center mb-3">
+                        <input class="form-check-input me-2" type="checkbox" id="promoCheck" checked>
+                        <label class="form-check-label small mb-0" for="promoCheck">
+                            Keep me posted about sales and offers
+                        </label>
+                    </div>
+
+                    <div class="text-center small text-muted ">
+                        By proceeding, I accept the <a href="/termsConditions">T&amp;C</a> and <a
+                            href="/privacyPolicy">Privacy Policy</a><br>
+                        <i class="bi bi-lock"></i> Secured by Logiclead
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="custom-profile-popup" id="otpPopup">
+        <div class="custom-popup-content">
+            <button class="custom-popup-close" id="closeOtpPopup">&times;</button>
+
+            <div class="custom-popup-header">
+                <h4 class="custom-user-name text-center">Verify OTP</h4>
+                <p class="otp-subtitle text-center">Enter the 4-digit code sent to your email</p>
+            </div>
+
+            <div class="custom-popup-body">
+                <form class="custom-popup-form-opt" id="otpForm">
+                    <center>
+                        <div class="otp-inputs">
+                            <input type="number" maxlength="1" class="otp-input" name="otp[]" required>
+                            <input type="number" maxlength="1" class="otp-input" name="otp[]" required>
+                            <input type="number" maxlength="1" class="otp-input" name="otp[]" required>
+                            <input type="number" maxlength="1" class="otp-input" name="otp[]" required>
+                        </div>
+                    </center>
+                    <button type="button" class="custom-popup-btn mt-3" id="otpSubmitBtn">
+                        Verify OTP
+                    </button>
+
+                    <div class="resend text-center mt-3">
+                        Didn't receive the code? <a href="#" id="resendOtp">Resend OTP</a>
+                    </div>
+
+                    <div class="text-center small text-muted mt-3">
+                        By proceeding, I accept the <a href="/termsConditions">T&amp;C</a> and
+                        <a href="/privacyPolicy">Privacy Policy</a><br>
+                         
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+     
+    <script src="script.js"></script>
+    
+</body>
+</html>
